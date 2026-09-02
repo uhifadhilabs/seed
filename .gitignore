@@ -1,0 +1,28 @@
+
+###> symfony/framework-bundle ###
+/.env.local
+/.env.local.php
+/.env.*.local
+/config/secrets/prod/prod.decrypt.private.php
+/public/bundles/
+/var/
+/vendor/
+###< symfony/framework-bundle ###
+
+###> friendsofphp/php-cs-fixer ###
+/.php-cs-fixer.php
+/.php-cs-fixer.cache
+###< friendsofphp/php-cs-fixer ###
+
+###> phpunit/phpunit ###
+/phpunit.xml
+/.phpunit.cache/
+###< phpunit/phpunit ###
+
+###> project ###
+/.idea/
+# Auto-generated Symfony config-reference dump — regenerated on install, never
+# a source of truth. The seed is copied once; a stale 800-line dump is exactly
+# the kind of line an installation should not be stuck with.
+/config/reference.php
+###< project ###
