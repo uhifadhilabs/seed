@@ -11,17 +11,6 @@ Uhifadhi is structured like the thing it protects:
 > incident, roster, map, team, widget, area…) → **`uhifadhi/canopy-module`**
 > (the visible crown).
 
-| Layer | Package | Owns |
-|---|---|---|
-| The seed | `uhifadhi/seed` | the project template, planted once |
-| The trunk | `uhifadhi/trunk-module` | the seam runtime + module catalogue every module registers with |
-| The canopy | `uhifadhi/canopy-module` | layout, nav, theme — the designed socket contract |
-| Core branches | `uhifadhi/map-module`, `team-module`, `widget-module`, `area-module` | imagery + chrome; auth + org; widget/preset machinery; areas + zones + the area overview |
-| Branches | `uhifadhi/patrol-module`, `incident-module`, `roster-module`, `storage-module`, `workflow-module`, `fixtures-module` | the capabilities |
-
-Growing a branch of your own is documented in [module-contracts'
-guide](https://github.com/uhifadhilabs/module-contracts/blob/main/docs/module-development.md).
-
 **This repository is the seed** — and only the seed. It is copied once, by
 `composer create-project`, and then it is yours; it is never updated again.
 Everything above it is a bundle, updated forever through composer.
