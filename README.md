@@ -6,9 +6,10 @@ The project template every uhifadhi installation grows from.
 
 Uhifadhi is structured like the thing it protects:
 
-> **`uhifadhi/seed`** (planted once) → **`trunk-module`** (the seam runtime every
-> module registers with) → **branches** (the modules: patrol, incident, roster,
-> map, team, widget, area…) → **`canopy-module`** (the visible crown).
+> **`uhifadhi/seed`** (planted once) → **`uhifadhi/trunk-module`** (the seam
+> runtime every module registers with) → **branches** (the modules: patrol,
+> incident, roster, map, team, widget, area…) → **`uhifadhi/canopy-module`**
+> (the visible crown).
 
 **This repository is the seed** — and only the seed. It is copied once, by
 `composer create-project`, and then it is yours; it is never updated again.
@@ -57,7 +58,7 @@ endpoint is configured, composer wires the bundle up for you — registration,
 config, routes:
 
 ```bash
-composer require uhifadhilabs/<name>-module
+composer require uhifadhi/<name>-module
 ```
 
 **Status, honestly:** the trunk and canopy bundles named in the tree above do not
