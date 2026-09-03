@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fd48490b80289f791286004499edd047",
+    "content-hash": "561c7f06131a4f1c21d20e2cede4f63b",
     "packages": [
         {
             "name": "composer/semver",
@@ -5099,16 +5099,16 @@
         },
         {
             "name": "uhifadhi/shell-module",
-            "version": "v0.4.0",
+            "version": "v0.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/uhifadhilabs/shell-module.git",
-                "reference": "685f30bb4a069cfd9f1ec029acbf7ddbc2ce85e4"
+                "reference": "1f8b84831e9d0064ec4d9bd75884809cd709129b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/uhifadhilabs/shell-module/zipball/685f30bb4a069cfd9f1ec029acbf7ddbc2ce85e4",
-                "reference": "685f30bb4a069cfd9f1ec029acbf7ddbc2ce85e4",
+                "url": "https://api.github.com/repos/uhifadhilabs/shell-module/zipball/1f8b84831e9d0064ec4d9bd75884809cd709129b",
+                "reference": "1f8b84831e9d0064ec4d9bd75884809cd709129b",
                 "shasum": ""
             },
             "require": {
@@ -5119,7 +5119,9 @@
                 "symfony/config": "^7.3 || ^8.0",
                 "symfony/dependency-injection": "^7.3 || ^8.0",
                 "symfony/framework-bundle": "^7.3 || ^8.0",
+                "symfony/http-foundation": "^7.3 || ^8.0",
                 "symfony/http-kernel": "^7.3 || ^8.0",
+                "symfony/routing": "^7.3 || ^8.0",
                 "symfony/stimulus-bundle": "^2.20 || ^3.0",
                 "symfony/twig-bundle": "^7.3 || ^8.0",
                 "symfony/ux-icons": "^2.20 || ^3.0",
@@ -5135,7 +5137,7 @@
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "0.3-dev"
+                    "dev-main": "0.4-dev"
                 }
             },
             "autoload": {
@@ -5168,9 +5170,9 @@
             ],
             "support": {
                 "issues": "https://github.com/uhifadhilabs/shell-module/issues",
-                "source": "https://github.com/uhifadhilabs/shell-module/tree/v0.4.0"
+                "source": "https://github.com/uhifadhilabs/shell-module/tree/v0.5.0"
             },
-            "time": "2026-09-03T10:34:26+00:00"
+            "time": "2026-09-03T12:06:17+00:00"
         }
     ],
     "packages-dev": [
@@ -8386,7 +8388,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {},
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
@@ -8394,6 +8396,6 @@
         "ext-ctype": "*",
         "ext-iconv": "*"
     },
-    "platform-dev": [],
+    "platform-dev": {},
     "plugin-api-version": "2.9.0"
 }

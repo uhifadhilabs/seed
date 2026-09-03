@@ -163,11 +163,18 @@ installs `uhifadhi/seam-module` and `uhifadhi/shell-module` with their recipes,
 boots, and serves a welcome page at `/` — a branded, navigable shell that says
 what the two installed packages are and what installing a module does.
 
-That page is the shell's template, and `config/routes/shell.yaml` is what puts
-it at an address: the shell ships no routes, so the URL is this application's,
-pointed at `@UhifadhiShell/welcome.html.twig` through Symfony's own
-TemplateController. There is no controller class, and the file is meant to be
-replaced the day this installation grows a real home screen. Capability modules join one at a time, each proven by a real
+That page, its controller and its route are all the shell's — but the address is
+this application's, because `config/routes/shell.yaml` is one line of consent:
+
+```yaml
+shell:
+    resource: '@UhifadhiShellBundle/config/routes/welcome.php'
+```
+
+The shell loads that resource nowhere; the import is what makes `/` answer. Edit
+the file to point `/` at your own home screen, or delete it and the address is
+yours again — nothing is left behind. `debug:router` shows what you are
+replacing: a route named `welcome`. Capability modules join one at a time, each proven by a real
 `create-project` before the next begins. The
 [uhifadhi host](https://github.com/uhifadhilabs/uhifadhi-host) remains the
 reference application until this reaches parity.
