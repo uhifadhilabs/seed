@@ -14,26 +14,23 @@ doctrine:
             Doctrine\DBAL\Platforms\PostgreSQLPlatform: identity
         auto_mapping: true
         mappings:
-            # `Uhifadhi\Entity`, NOT the stock recipe's `App\Entity`.
+            # THE STOCK BLOCK, AND IT IS RIGHT. doctrine-bundle's Flex recipe
+            # writes this assuming the symfony/skeleton's `App\` root, and the
+            # seed's root IS `App\` (composer.json autoload.psr-4) — the seed is
+            # a stock Symfony application, and `Uhifadhi\` is reserved for the
+            # platform's own packages (`Uhifadhi\Trunk\`, and its siblings).
             #
-            # doctrine-bundle's Flex recipe writes this block assuming the
-            # symfony/skeleton's `App\` root. This project's root is `Uhifadhi\`
-            # (composer.json autoload.psr-4), so the recipe's prefix points at a
-            # namespace nothing here is in — and the failure arrives late and
-            # unhelpfully, at the first class that needs mapping:
-            #
-            #   The class 'Uhifadhi\Entity\AreaOfInterest' was not found in the
-            #   chain configured namespaces App\Entity, UhifadhiLabs\Trunk\Entity
-            #
-            # The seed is copied once and never updated, so a wrong line here is
-            # one every future installation is stuck with, and it is corrected
-            # before planting rather than in each planted project.
-            Uhifadhi:
+            # It reads as boilerplate and is kept in the seed on purpose: the
+            # seed is copied once and never updated, so a line here is one every
+            # future installation is stuck with, and this one has to be present
+            # and correct before the area entity the trunk asks for can map at
+            # all. See config/packages/trunk.yaml for that step.
+            App:
                 type: attribute
                 is_bundle: false
                 dir: '%kernel.project_dir%/src/Entity'
-                prefix: 'Uhifadhi\Entity'
-                alias: Uhifadhi
+                prefix: 'App\Entity'
+                alias: App
 
 when@test:
     doctrine:

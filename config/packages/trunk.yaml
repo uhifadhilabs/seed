@@ -53,21 +53,21 @@ when@test:
 # — stops on the unresolved interface:
 #
 #   In MappingException.php line 72:
-#     Class 'UhifadhiLabs\Trunk\Entity\AreaInterface' does not exist
+#     Class 'Uhifadhi\Trunk\Entity\AreaInterface' does not exist
 #
 # That is not a bug to route around. The per-area ledger has a NOT NULL foreign
 # key to an area; there is no half of this schema that exists without one.
 #
 # THE STEP, IN FULL. Give your application an area entity that implements
-# UhifadhiLabs\Trunk\Entity\AreaInterface (it asks for getId() and nothing
+# Uhifadhi\Trunk\Entity\AreaInterface (it asks for getId() and nothing
 # else) — a project planted from the uhifadhi seed puts it in src/Entity/ under
-# the seed's PSR-4 root, `Uhifadhi\`:
+# the seed's PSR-4 root, the stock Symfony `App\`:
 #
 #   // src/Entity/AreaOfInterest.php
-#   namespace Uhifadhi\Entity;
+#   namespace App\Entity;
 #
 #   use Doctrine\ORM\Mapping as ORM;
-#   use UhifadhiLabs\Trunk\Entity\AreaInterface;
+#   use Uhifadhi\Trunk\Entity\AreaInterface;
 #
 #   #[ORM\Entity]
 #   class AreaOfInterest implements AreaInterface
@@ -83,16 +83,18 @@ when@test:
 #   doctrine:
 #       orm:
 #           resolve_target_entities:
-#               UhifadhiLabs\Trunk\Entity\AreaInterface: Uhifadhi\Entity\AreaOfInterest
+#               Uhifadhi\Trunk\Entity\AreaInterface: App\Entity\AreaOfInterest
 #
-# MIND THE MAPPING PREFIX. `Uhifadhi\Entity`, not `App\Entity`: the stock
+# MIND THE MAPPING PREFIX — it has to cover the class you just named. The stock
 # doctrine-bundle recipe writes an `App\Entity` prefix into
-# config/packages/doctrine.yaml, which is not the seed's root namespace. The
-# seed ships that line already corrected; if you planted before it did, a
-# `Uhifadhi\Entity\…` class fails with
+# config/packages/doctrine.yaml, which is the seed's root, so an area entity in
+# src/Entity/ is already mapped and there is nothing to correct. If you moved
+# your entities elsewhere, or your project does not use the `App\` root, the
+# resolve_target_entities line above still resolves but the class it names is
+# not in the metadata chain, and you get
 #
-#   The class 'Uhifadhi\Entity\AreaOfInterest' was not found in the chain
-#   configured namespaces App\Entity, UhifadhiLabs\Trunk\Entity
+#   The class 'App\Entity\AreaOfInterest' was not found in the chain
+#   configured namespaces App\Entity, Uhifadhi\Trunk\Entity
 #
 # THEN, in this order:
 #

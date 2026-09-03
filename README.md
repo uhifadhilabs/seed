@@ -81,7 +81,7 @@ there is no schema to create at all:
 ```console
 $ bin/console doctrine:migrations:diff
 In MappingException.php line 72:
-  Class 'UhifadhiLabs\Trunk\Entity\AreaInterface' does not exist
+  Class 'Uhifadhi\Trunk\Entity\AreaInterface' does not exist
 ```
 
 So, once — the whole of it:
@@ -90,10 +90,10 @@ So, once — the whole of it:
 // src/Entity/AreaOfInterest.php
 declare(strict_types=1);
 
-namespace Uhifadhi\Entity;
+namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use UhifadhiLabs\Trunk\Entity\AreaInterface;
+use Uhifadhi\Trunk\Entity\AreaInterface;
 
 #[ORM\Entity]
 class AreaOfInterest implements AreaInterface
@@ -114,13 +114,15 @@ and uncomment the block `config/packages/trunk.yaml` ends with, naming it:
 doctrine:
     orm:
         resolve_target_entities:
-            UhifadhiLabs\Trunk\Entity\AreaInterface: Uhifadhi\Entity\AreaOfInterest
+            Uhifadhi\Trunk\Entity\AreaInterface: App\Entity\AreaOfInterest
 ```
 
-`Uhifadhi\Entity`, not `App\Entity`. The stock doctrine-bundle recipe assumes
-the skeleton's `App\` root and this project's root is `Uhifadhi\`; the seed
-ships `config/packages/doctrine.yaml` with that prefix already corrected, and
-the comment there says why.
+`App\Entity` is this project's root — the seed is a stock Symfony application,
+and `Uhifadhi\` belongs to the platform's own packages (`Uhifadhi\Trunk\` on the
+left-hand side above is the bundle's, not yours). So the mapping prefix the
+stock doctrine-bundle recipe writes into `config/packages/doctrine.yaml` already
+covers the entity, and the comment there says why the seed keeps the block
+rather than leaving it to the recipe.
 
 Then:
 

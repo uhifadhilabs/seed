@@ -11,7 +11,7 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-use Uhifadhi\Kernel;
+use App\Kernel;
 
 require_once dirname(__DIR__).'/vendor/autoload_runtime.php';
 
