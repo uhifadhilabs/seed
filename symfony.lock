@@ -120,6 +120,19 @@
             "config/routes.yaml"
         ]
     },
+    "symfony/twig-bundle": {
+        "version": "8.1",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "main",
+            "version": "6.4",
+            "ref": "06dacf16872358cb1f2494e089070ff2d045233a"
+        },
+        "files": [
+            "config/packages/twig.yaml",
+            "templates/base.html.twig"
+        ]
+    },
     "symfony/uid": {
         "version": "8.1",
         "recipe": {
@@ -128,6 +141,19 @@
             "version": "7.0",
             "ref": "0df5844274d871b37fc3816c57a768ffc60a43a5"
         }
+    },
+    "symfony/ux-icons": {
+        "version": "3.4",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "main",
+            "version": "3.4",
+            "ref": "16a3114526e46593b494471d1654dfa46831beb5"
+        },
+        "files": [
+            "assets/icons/symfony.svg",
+            "config/packages/ux_icons.yaml"
+        ]
     },
     "uhifadhi/seam-module": {
         "version": "0.1",
@@ -139,6 +165,18 @@
         },
         "files": [
             "config/packages/seam.yaml"
+        ]
+    },
+    "uhifadhi/shell-module": {
+        "version": "0.1",
+        "recipe": {
+            "repo": "github.com/uhifadhilabs/recipes",
+            "branch": "main",
+            "version": "0.1",
+            "ref": "03e6daad1c41ea184985c45205eff7f73a125f2c"
+        },
+        "files": [
+            "config/packages/shell.yaml"
         ]
     }
 }
