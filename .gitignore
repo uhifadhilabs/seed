@@ -26,3 +26,8 @@
 # the kind of line an installation should not be stuck with.
 /config/reference.php
 ###< project ###
+
+###> symfony/asset-mapper ###
+/public/assets/
+/assets/vendor/
+###< symfony/asset-mapper ###

@@ -1,11 +1,10 @@
 {
     "name": "uhifadhi/uhifadhi",
-    "description": "The uhifadhi project template — a bare Symfony kernel wired to the uhifadhilabs recipe endpoint. Planted once; every capability grows on top as a module bundle.",
+    "description": "The uhifadhi project template — a bare Symfony kernel wired to the uhifadhilabs recipe endpoint. Installed once; every capability arrives on top as a module bundle.",
     "type": "project",
     "keywords": [
         "conservation",
         "project",
-        "seed",
         "skeleton",
         "symfony",
         "uhifadhi"
@@ -29,7 +28,7 @@
         "symfony/runtime": "8.1.*",
         "symfony/yaml": "8.1.*",
         "uhifadhi/seam-module": "^0.1",
-        "uhifadhi/shell-module": "^0.2"
+        "uhifadhi/shell-module": "^0.4"
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^3.95.24",
@@ -70,7 +69,8 @@
     "scripts": {
         "auto-scripts": {
             "cache:clear": "symfony-cmd",
-            "assets:install %PUBLIC_DIR%": "symfony-cmd"
+            "assets:install %PUBLIC_DIR%": "symfony-cmd",
+            "importmap:install": "symfony-cmd"
         },
         "post-install-cmd": [
             "@auto-scripts"

@@ -1,0 +1,8 @@
+/*
+ * This installation's own stylesheet.
+ *
+ * The shell (uhifadhi/shell-module) ships the theme, the page frame and their
+ * CSS; this file is empty on purpose and is where your own rules go. It is
+ * loaded through assets/app.js, after the shell's sheet, so anything written
+ * here overrides the shell.
+ */
