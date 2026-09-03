@@ -31,18 +31,33 @@ final class SmokeTest extends WebTestCase
     }
 
     /**
-     * The seed deliberately ships no routes, so `/` is an honest 404 — in debug
-     * Symfony renders its own welcome page on that 404, which is the first thing
-     * you see after `composer create-project`. The status, not the body, is the
-     * contract here: asserting the welcome markup would couple the seed to a
-     * framework internal, and the page disappears the moment the first route
-     * lands. What this pins is that the request cycle completes end to end.
+     * `/` ANSWERS 200 WITH THE WELCOME PAGE, and that is the seed's contract
+     * now. It used to be an honest 404 — the seed ships no controllers, so in
+     * debug Symfony rendered its own welcome-404, which was the first thing
+     * anybody saw after `composer create-project`: a correct installation
+     * looking like a broken one.
+     *
+     * The fix is one route and no PHP. `config/routes/shell.yaml` points `/` at
+     * the shell's `welcome.html.twig` through Symfony's own TemplateController,
+     * so the seed still ships no controller class and the shell still ships no
+     * route.
+     *
+     * The body is asserted here, unlike before, because it is no longer a
+     * framework internal: it is a page this platform ships and this route names.
+     * As strings rather than through a crawler — the seed carries no
+     * css-selector and does not need one to know it served the right page.
      */
-    public function testTheHomepageAnswers(): void
+    public function testTheHomepageAnswersWithTheWelcomePage(): void
     {
         $client = self::createClient();
         $client->request('GET', '/');
 
-        self::assertSame(Response::HTTP_NOT_FOUND, $client->getResponse()->getStatusCode());
+        self::assertSame(Response::HTTP_OK, $client->getResponse()->getStatusCode());
+
+        $html = (string) $client->getResponse()->getContent();
+
+        self::assertStringContainsString('<div class="page">', $html, 'It renders inside the shell\'s page frame.');
+        self::assertStringContainsString('uhifadhi/seam-module', $html);
+        self::assertStringContainsString('uhifadhi/shell-module', $html);
     }
 }

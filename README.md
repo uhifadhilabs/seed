@@ -160,8 +160,14 @@ composer require uhifadhi/<name>-module
 
 **Status, honestly:** the seam and the shell are both here. A new project
 installs `uhifadhi/seam-module` and `uhifadhi/shell-module` with their recipes,
-boots, serves a branded and navigable shell, and reports an honestly empty
-catalogue. Capability modules join one at a time, each proven by a real
+boots, and serves a welcome page at `/` — a branded, navigable shell that says
+what the two installed packages are and what installing a module does.
+
+That page is the shell's template, and `config/routes/shell.yaml` is what puts
+it at an address: the shell ships no routes, so the URL is this application's,
+pointed at `@UhifadhiShell/welcome.html.twig` through Symfony's own
+TemplateController. There is no controller class, and the file is meant to be
+replaced the day this installation grows a real home screen. Capability modules join one at a time, each proven by a real
 `create-project` before the next begins. The
 [uhifadhi host](https://github.com/uhifadhilabs/uhifadhi-host) remains the
 reference application until this reaches parity.

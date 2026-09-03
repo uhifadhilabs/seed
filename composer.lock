@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b9499a74e2e293d12fd7f7b47d38e585",
+    "content-hash": "2c749260277040bec1ea7e2345525501",
     "packages": [
         {
             "name": "doctrine/collections",
@@ -4686,16 +4686,16 @@
         },
         {
             "name": "uhifadhi/shell-module",
-            "version": "v0.1.0",
+            "version": "v0.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/uhifadhilabs/shell-module.git",
-                "reference": "8f0ec641e125feecbdb4be224058cb799993b819"
+                "reference": "f19a4d0d498cc86fcdc956d3dc6a01e896a82910"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/uhifadhilabs/shell-module/zipball/8f0ec641e125feecbdb4be224058cb799993b819",
-                "reference": "8f0ec641e125feecbdb4be224058cb799993b819",
+                "url": "https://api.github.com/repos/uhifadhilabs/shell-module/zipball/f19a4d0d498cc86fcdc956d3dc6a01e896a82910",
+                "reference": "f19a4d0d498cc86fcdc956d3dc6a01e896a82910",
                 "shasum": ""
             },
             "require": {
@@ -4751,9 +4751,9 @@
             ],
             "support": {
                 "issues": "https://github.com/uhifadhilabs/shell-module/issues",
-                "source": "https://github.com/uhifadhilabs/shell-module/tree/v0.1.0"
+                "source": "https://github.com/uhifadhilabs/shell-module/tree/v0.2.0"
             },
-            "time": "2026-09-03T07:11:24+00:00"
+            "time": "2026-09-03T08:53:49+00:00"
         }
     ],
     "packages-dev": [
