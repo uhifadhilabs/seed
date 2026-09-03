@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "526d3bda9918c979a3dfa0dd9950512b",
+    "content-hash": "bb952b7d905b63854f0c73c24118c2f6",
     "packages": [
         {
             "name": "doctrine/collections",
@@ -4043,7 +4043,7 @@
         },
         {
             "name": "uhifadhi/module-contracts",
-            "version": "dev-main",
+            "version": "v0.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/uhifadhilabs/module-contracts.git",
@@ -4063,7 +4063,6 @@
                 "phpstan/phpstan": "^2.2",
                 "phpunit/phpunit": "^13.2"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -4075,30 +4074,7 @@
                     "Uhifadhi\\ModuleContracts\\": "src/"
                 }
             },
-            "autoload-dev": {
-                "psr-4": {
-                    "Uhifadhi\\ModuleContracts\\Tests\\": "tests/"
-                }
-            },
-            "scripts": {
-                "cs:fix": [
-                    "php-cs-fixer fix"
-                ],
-                "cs:check": [
-                    "php-cs-fixer fix --dry-run --diff"
-                ],
-                "phpstan": [
-                    "phpstan analyse --no-progress --memory-limit=1G"
-                ],
-                "test": [
-                    "phpunit"
-                ],
-                "check": [
-                    "@cs:check",
-                    "@phpstan",
-                    "@test"
-                ]
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -4116,23 +4092,23 @@
                 "uhifadhi"
             ],
             "support": {
-                "source": "https://github.com/uhifadhilabs/module-contracts/tree/main",
-                "issues": "https://github.com/uhifadhilabs/module-contracts/issues"
+                "issues": "https://github.com/uhifadhilabs/module-contracts/issues",
+                "source": "https://github.com/uhifadhilabs/module-contracts/tree/v0.1.0"
             },
             "time": "2026-09-03T03:20:26+00:00"
         },
         {
             "name": "uhifadhi/seam-module",
-            "version": "dev-main",
+            "version": "v0.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/uhifadhilabs/seam-module.git",
-                "reference": "57c3446061a91f6954c5363a9e24f056fe814f8d"
+                "reference": "ca9a91742ec9c8055c2b406321b06c9d1e978839"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/uhifadhilabs/seam-module/zipball/57c3446061a91f6954c5363a9e24f056fe814f8d",
-                "reference": "57c3446061a91f6954c5363a9e24f056fe814f8d",
+                "url": "https://api.github.com/repos/uhifadhilabs/seam-module/zipball/ca9a91742ec9c8055c2b406321b06c9d1e978839",
+                "reference": "ca9a91742ec9c8055c2b406321b06c9d1e978839",
                 "shasum": ""
             },
             "require": {
@@ -4146,14 +4122,13 @@
                 "symfony/framework-bundle": "^7.3 || ^8.0",
                 "symfony/http-kernel": "^7.3 || ^8.0",
                 "symfony/uid": "^7.3 || ^8.0",
-                "uhifadhi/module-contracts": "dev-main"
+                "uhifadhi/module-contracts": "^0.1"
             },
             "require-dev": {
                 "friendsofphp/php-cs-fixer": "^3.95",
                 "phpstan/phpstan": "^2.2",
                 "phpunit/phpunit": "^13.2"
             },
-            "default-branch": true,
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
@@ -4165,31 +4140,7 @@
                     "Uhifadhi\\Seam\\": "src/"
                 }
             },
-            "autoload-dev": {
-                "psr-4": {
-                    "Uhifadhi\\Seam\\Tests\\": "tests/",
-                    "Uhifadhi\\Entity\\": "tests/Integration/Fixtures/Uhifadhi/Entity/"
-                }
-            },
-            "scripts": {
-                "cs:fix": [
-                    "php-cs-fixer fix"
-                ],
-                "cs:check": [
-                    "php-cs-fixer fix --dry-run --diff"
-                ],
-                "phpstan": [
-                    "phpstan analyse --no-progress --memory-limit=1G"
-                ],
-                "test": [
-                    "phpunit"
-                ],
-                "check": [
-                    "@cs:check",
-                    "@phpstan",
-                    "@test"
-                ]
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "AGPL-3.0-or-later"
             ],
@@ -4201,8 +4152,8 @@
             ],
             "description": "The seam: the module seam runtime every uhifadhi module registers with — the catalogue, per-area installation, the permission declarations modules contribute, and the seed that keeps them in step.",
             "keywords": [
+                "Conservation",
                 "catalogue",
-                "conservation",
                 "module",
                 "platform",
                 "runtime",
@@ -4211,10 +4162,10 @@
                 "uhifadhi"
             ],
             "support": {
-                "source": "https://github.com/uhifadhilabs/seam-module/tree/main",
-                "issues": "https://github.com/uhifadhilabs/seam-module/issues"
+                "issues": "https://github.com/uhifadhilabs/seam-module/issues",
+                "source": "https://github.com/uhifadhilabs/seam-module/tree/v0.1.0"
             },
-            "time": "2026-09-03T03:28:55+00:00"
+            "time": "2026-09-03T03:59:51+00:00"
         }
     ],
     "packages-dev": [
@@ -7506,10 +7457,8 @@
         }
     ],
     "aliases": [],
-    "minimum-stability": "dev",
-    "stability-flags": {
-        "uhifadhi/seam-module": 20
-    },
+    "minimum-stability": "stable",
+    "stability-flags": {},
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

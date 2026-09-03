@@ -58,31 +58,12 @@ The package is not on Packagist yet, so point composer at this repository until
 it is:
 
 ```bash
-composer create-project uhifadhi/uhifadhi my-installation dev-main \
-  --repository='{"type":"vcs","url":"https://github.com/uhifadhilabs/uhifadhi"}' \
-  --stability=dev
+composer create-project uhifadhi/uhifadhi my-installation
 cd my-installation
 composer test          # the smoke test: it boots
 php -S localhost:8000 -t public
 ```
 
-### Temporary: the VCS repository entries
-
-`composer.json` carries `repositories` entries for `uhifadhi/seam-module` and
-`uhifadhi/module-contracts`, with `minimum-stability: dev`, and requires the seam
-as `dev-main` rather than `^0.1`. **All of that is scaffolding and comes out.**
-
-The two packages were renamed (`trunk-module` → `seam-module`) and Packagist does
-not serve the new names yet, so composer has nowhere to resolve them from but the
-repositories themselves. The moment `uhifadhi/seam-module` and
-`uhifadhi/module-contracts` are published under their new names and tagged, this
-section and those entries are deleted and the require goes back to a stable
-constraint. A seed that shipped permanently with VCS entries and a dev floor
-would be teaching every planted project a habit it should not have.
-
-Visiting `/` on a fresh installation returns **404** — the seed ships no routes,
-and in debug Symfony renders its own welcome page on that 404. That is the seed
-working correctly, not a fault: routes arrive with the bundles you add.
 
 ### Give it a database
 
