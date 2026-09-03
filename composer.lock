@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9b5db2dd47f621ea40abc744b31af5cf",
+    "content-hash": "526d3bda9918c979a3dfa0dd9950512b",
     "packages": [
         {
             "name": "doctrine/collections",
@@ -4047,12 +4047,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/uhifadhilabs/module-contracts.git",
-                "reference": "81ec8b2f93a356523a1972ad23a4b9ad9e6b909d"
+                "reference": "3f2a997921292c660602bdf3df505c2d703d9fa3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/uhifadhilabs/module-contracts/zipball/81ec8b2f93a356523a1972ad23a4b9ad9e6b909d",
-                "reference": "81ec8b2f93a356523a1972ad23a4b9ad9e6b909d",
+                "url": "https://api.github.com/repos/uhifadhilabs/module-contracts/zipball/3f2a997921292c660602bdf3df505c2d703d9fa3",
+                "reference": "3f2a997921292c660602bdf3df505c2d703d9fa3",
                 "shasum": ""
             },
             "require": {
@@ -4119,20 +4119,20 @@
                 "source": "https://github.com/uhifadhilabs/module-contracts/tree/main",
                 "issues": "https://github.com/uhifadhilabs/module-contracts/issues"
             },
-            "time": "2026-09-03T02:27:06+00:00"
+            "time": "2026-09-03T03:20:26+00:00"
         },
         {
-            "name": "uhifadhi/trunk-module",
+            "name": "uhifadhi/seam-module",
             "version": "dev-main",
             "source": {
                 "type": "git",
-                "url": "https://github.com/uhifadhilabs/trunk-module.git",
-                "reference": "e319b1d3bf4018637550bb5d6aca89b06843d7b1"
+                "url": "https://github.com/uhifadhilabs/seam-module.git",
+                "reference": "57c3446061a91f6954c5363a9e24f056fe814f8d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/uhifadhilabs/trunk-module/zipball/e319b1d3bf4018637550bb5d6aca89b06843d7b1",
-                "reference": "e319b1d3bf4018637550bb5d6aca89b06843d7b1",
+                "url": "https://api.github.com/repos/uhifadhilabs/seam-module/zipball/57c3446061a91f6954c5363a9e24f056fe814f8d",
+                "reference": "57c3446061a91f6954c5363a9e24f056fe814f8d",
                 "shasum": ""
             },
             "require": {
@@ -4162,12 +4162,12 @@
             },
             "autoload": {
                 "psr-4": {
-                    "Uhifadhi\\Trunk\\": "src/"
+                    "Uhifadhi\\Seam\\": "src/"
                 }
             },
             "autoload-dev": {
                 "psr-4": {
-                    "Uhifadhi\\Trunk\\Tests\\": "tests/",
+                    "Uhifadhi\\Seam\\Tests\\": "tests/",
                     "Uhifadhi\\Entity\\": "tests/Integration/Fixtures/Uhifadhi/Entity/"
                 }
             },
@@ -4199,7 +4199,7 @@
                     "homepage": "https://github.com/eemjema"
                 }
             ],
-            "description": "The trunk: the module seam runtime every uhifadhi module registers with — the catalogue, per-area installation, the permission declarations modules contribute, and the seed that keeps them in step.",
+            "description": "The seam: the module seam runtime every uhifadhi module registers with — the catalogue, per-area installation, the permission declarations modules contribute, and the seed that keeps them in step.",
             "keywords": [
                 "catalogue",
                 "conservation",
@@ -4211,10 +4211,10 @@
                 "uhifadhi"
             ],
             "support": {
-                "source": "https://github.com/uhifadhilabs/trunk-module/tree/main",
-                "issues": "https://github.com/uhifadhilabs/trunk-module/issues"
+                "source": "https://github.com/uhifadhilabs/seam-module/tree/main",
+                "issues": "https://github.com/uhifadhilabs/seam-module/issues"
             },
-            "time": "2026-09-03T02:27:21+00:00"
+            "time": "2026-09-03T03:28:55+00:00"
         }
     ],
     "packages-dev": [
@@ -7508,7 +7508,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "uhifadhi/trunk-module": 20
+        "uhifadhi/seam-module": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
