@@ -1,12 +1,12 @@
-# uhifadhi/seed
+i# uhifadhi/uhifadhi
 
-The project template every uhifadhi installation grows from.
+The project template every uhifadhi installation grows from — the seed.
 
 ## The tree
 
 Uhifadhi is structured like the thing it protects:
 
-> **`uhifadhi/seed`** (planted once) → **`uhifadhi/trunk-module`** (the seam
+> **the seed — `uhifadhi/uhifadhi`** (planted once) → **`uhifadhi/trunk-module`** (the seam
 > runtime every module registers with) → **branches** (the modules: patrol,
 > incident, roster, map, team, widget, area…) → **`uhifadhi/canopy-module`**
 > (the visible crown).
@@ -40,8 +40,13 @@ first entity-bearing module, through that module's recipe.
 
 ## Plant it
 
+The package is not on Packagist yet, so point composer at this repository until
+it is:
+
 ```bash
-composer create-project uhifadhi/seed my-installation
+composer create-project uhifadhi/uhifadhi my-installation dev-main \
+  --repository='{"type":"vcs","url":"https://github.com/uhifadhilabs/uhifadhi"}' \
+  --stability=dev
 cd my-installation
 composer test          # the smoke test: it boots
 php -S localhost:8000 -t public
@@ -63,7 +68,7 @@ composer require uhifadhi/<name>-module
 
 **Status, honestly:** the trunk and canopy bundles named in the tree above do not
 exist as published packages yet — the module seam currently lives inside the
-[uhifadhi](https://github.com/uhifadhilabs/uhifadhi) host application, and is
+[uhifadhi host](https://github.com/uhifadhilabs/uhifadhi-host) application, and is
 being extracted. Until that extraction lands, a freshly planted seed is a bare
 Symfony kernel and nothing more. This README will grow a real list of installable
 rings as they are published; it will not list them before they are.

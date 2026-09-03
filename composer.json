@@ -1,5 +1,5 @@
 {
-    "name": "uhifadhi/seed",
+    "name": "uhifadhi/uhifadhi",
     "description": "The uhifadhi project template \u2014 a bare Symfony kernel wired to the uhifadhilabs recipe endpoint. Planted once; every capability grows on top as a module bundle.",
     "type": "project",
     "keywords": [
