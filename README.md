@@ -66,12 +66,13 @@ config, routes:
 composer require uhifadhi/<name>-module
 ```
 
-**Status, honestly:** the trunk and canopy bundles named in the tree above do not
-exist as published packages yet — the module seam currently lives inside the
-[uhifadhi host](https://github.com/uhifadhilabs/uhifadhi-host) application, and is
-being extracted. Until that extraction lands, a freshly planted seed is a bare
-Symfony kernel and nothing more. This README will grow a real list of installable
-rings as they are published; it will not list them before they are.
+**Status, honestly:** the trunk is grown — a planted project installs
+`uhifadhi/trunk-module` (the seam runtime and module catalogue) with its recipe,
+boots, and reports an honestly empty catalogue. The canopy (layout and theme) is
+being extracted next; module bundles join ring by ring, each proven by a real
+`create-project` before the next begins. The
+[uhifadhi host](https://github.com/uhifadhilabs/uhifadhi-host) remains the
+reference application until the tree reaches parity.
 
 ## Licence
 
