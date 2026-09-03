@@ -174,10 +174,12 @@ shell:
 The shell loads that resource nowhere; the import is what makes `/` answer. Edit
 the file to point `/` at your own home screen, or delete it and the address is
 yours again — nothing is left behind. `debug:router` shows what you are
-replacing: a route named `welcome`. Capability modules join one at a time, each proven by a real
-`create-project` before the next begins. The
-[uhifadhi host](https://github.com/uhifadhilabs/uhifadhi-host) remains the
-reference application until this reaches parity.
+replacing: a route named `welcome`.
+
+**What is not here yet is capability.** Until a module is installed, an
+installation is the seam, the shell and that one page — which is a working
+installation, not a half-finished one. Modules join one at a time, each proven by
+a real `create-project` before the next begins.
 
 ## Licence
 
