@@ -14,12 +14,26 @@ doctrine:
             Doctrine\DBAL\Platforms\PostgreSQLPlatform: identity
         auto_mapping: true
         mappings:
-            App:
+            # `Uhifadhi\Entity`, NOT the stock recipe's `App\Entity`.
+            #
+            # doctrine-bundle's Flex recipe writes this block assuming the
+            # symfony/skeleton's `App\` root. This project's root is `Uhifadhi\`
+            # (composer.json autoload.psr-4), so the recipe's prefix points at a
+            # namespace nothing here is in — and the failure arrives late and
+            # unhelpfully, at the first class that needs mapping:
+            #
+            #   The class 'Uhifadhi\Entity\AreaOfInterest' was not found in the
+            #   chain configured namespaces App\Entity, UhifadhiLabs\Trunk\Entity
+            #
+            # The seed is copied once and never updated, so a wrong line here is
+            # one every future installation is stuck with, and it is corrected
+            # before planting rather than in each planted project.
+            Uhifadhi:
                 type: attribute
                 is_bundle: false
                 dir: '%kernel.project_dir%/src/Entity'
-                prefix: 'App\Entity'
-                alias: App
+                prefix: 'Uhifadhi\Entity'
+                alias: Uhifadhi
 
 when@test:
     doctrine:
