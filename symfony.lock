@@ -198,15 +198,16 @@
         ]
     },
     "uhifadhi/shell-module": {
-        "version": "0.1",
+        "version": "0.5",
         "recipe": {
             "repo": "github.com/uhifadhilabs/recipes",
             "branch": "main",
-            "version": "0.1",
-            "ref": "03e6daad1c41ea184985c45205eff7f73a125f2c"
+            "version": "0.5",
+            "ref": "6b06537a9fd6b9851613b518220d75e8c50a1096"
         },
         "files": [
-            "config/packages/shell.yaml"
+            "config/packages/shell.yaml",
+            "config/routes/shell.yaml"
         ]
     }
 }
