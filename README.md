@@ -4,10 +4,10 @@ The project skeleton every uhifadhi installation starts from.
 
 ## The architecture
 
-**Uhifadhi is one skeleton and a set of bundles.** The skeleton
+**Uhifadhi is one skeleton and a set of modules.** The skeleton
 (`uhifadhi/uhifadhi` — this repository) is copied once by
 `composer create-project` and then it is yours; it is never updated again.
-Everything else arrives as a bundle, updated forever through composer. A module
+Everything else arrives as a module, updated forever through composer. A module
 **registers with the seam** (`uhifadhi/seam-module`) and **renders in the shell**
 (`uhifadhi/shell-module`); everything a deployment can do — patrols, incidents,
 rosters — is a module.
@@ -15,7 +15,7 @@ rosters — is a module.
 That is the whole design constraint here: a line added to the skeleton is a line
 every future installation is stuck with, so it stays boring on purpose. It is a
 bare Symfony kernel, the seam, the shell, and the one thing that lets it grow —
-the uhifadhilabs Flex recipe endpoint, which auto-wires a module bundle when you
+the uhifadhilabs Flex recipe endpoint, which auto-wires a module when you
 install it.
 
 ## What is in it
@@ -150,7 +150,7 @@ of its own: the tables are the bundle's, the history is yours.
 
 ## Grow it
 
-Installing a module bundle is the whole extension mechanism. Because the recipe
+Installing a module is the whole extension mechanism. Because the recipe
 endpoint is configured, composer wires the bundle up for you — registration,
 config, routes:
 
