@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "561c7f06131a4f1c21d20e2cede4f63b",
+    "content-hash": "4eeefc0618ab53c598ac4398f3aef541",
     "packages": [
         {
             "name": "composer/semver",
@@ -5029,16 +5029,16 @@
         },
         {
             "name": "uhifadhi/seam-module",
-            "version": "v0.1.0",
+            "version": "v0.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/uhifadhilabs/seam-module.git",
-                "reference": "ca9a91742ec9c8055c2b406321b06c9d1e978839"
+                "reference": "883d86e9e69738fdfcb4574b72fc67d5b2cd5b50"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/uhifadhilabs/seam-module/zipball/ca9a91742ec9c8055c2b406321b06c9d1e978839",
-                "reference": "ca9a91742ec9c8055c2b406321b06c9d1e978839",
+                "url": "https://api.github.com/repos/uhifadhilabs/seam-module/zipball/883d86e9e69738fdfcb4574b72fc67d5b2cd5b50",
+                "reference": "883d86e9e69738fdfcb4574b72fc67d5b2cd5b50",
                 "shasum": ""
             },
             "require": {
@@ -5052,7 +5052,7 @@
                 "symfony/framework-bundle": "^7.3 || ^8.0",
                 "symfony/http-kernel": "^7.3 || ^8.0",
                 "symfony/uid": "^7.3 || ^8.0",
-                "uhifadhi/module-contracts": "^0.1"
+                "uhifadhi/module-contracts": "^0.1 || ^0.2"
             },
             "require-dev": {
                 "friendsofphp/php-cs-fixer": "^3.95",
@@ -5093,9 +5093,9 @@
             ],
             "support": {
                 "issues": "https://github.com/uhifadhilabs/seam-module/issues",
-                "source": "https://github.com/uhifadhilabs/seam-module/tree/v0.1.0"
+                "source": "https://github.com/uhifadhilabs/seam-module/tree/v0.1.1"
             },
-            "time": "2026-09-03T03:59:51+00:00"
+            "time": "2026-09-03T17:32:43+00:00"
         },
         {
             "name": "uhifadhi/shell-module",
