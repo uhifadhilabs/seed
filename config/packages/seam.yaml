@@ -5,7 +5,7 @@
 #
 # ZERO MODULES IS A WORKING INSTALLATION. Nothing below is required — both keys
 # have defaults and the tree is closed, so an unknown key fails loudly rather
-# than being ignored. A freshly planted seed with this bundle and nothing else
+# than being ignored. A fresh installation with this bundle and nothing else
 # boots, has an empty catalogue, and is harmless:
 #
 #   bin/console seam:catalogue:seed
@@ -60,8 +60,8 @@ when@test:
 #
 # THE STEP, IN FULL. Give your application an area entity that implements
 # Uhifadhi\Seam\Entity\AreaInterface (it asks for getId() and nothing
-# else) — a project planted from the uhifadhi seed puts it in src/Entity/ under
-# the seed's PSR-4 root, the stock Symfony `App\`:
+# else) — a project created from the uhifadhi skeleton puts it in src/Entity/
+# under the skeleton's PSR-4 root, the stock Symfony `App\`:
 #
 #   // src/Entity/AreaOfInterest.php
 #   namespace App\Entity;
@@ -87,7 +87,7 @@ when@test:
 #
 # MIND THE MAPPING PREFIX — it has to cover the class you just named. The stock
 # doctrine-bundle recipe writes an `App\Entity` prefix into
-# config/packages/doctrine.yaml, which is the seed's root, so an area entity in
+# config/packages/doctrine.yaml, which is the skeleton's root, so an area entity in
 # src/Entity/ is already mapped and there is nothing to correct. If you moved
 # your entities elsewhere, or your project does not use the `App\` root, the
 # resolve_target_entities line above still resolves but the class it names is
@@ -106,7 +106,7 @@ when@test:
 # The seam ships entities, not migrations: the tables are the seam's, but the
 # migration history is yours, and a vendor replaying its own versions into it
 # would fight every `diff` you ever run. `doctrine/doctrine-migrations-bundle`
-# arrives as a dependency of this bundle for exactly that reason — the ring
+# arrives as a dependency of this bundle for exactly that reason — the bundle
 # that adds tables brings the tool that creates them.
 #
 # After the seed, every area is backfilled with the modules it has no row for —

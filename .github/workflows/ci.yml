@@ -1,6 +1,6 @@
 name: CI
 
-# The seed's whole promise is "it boots green". This is the gate that keeps it true.
+# The skeleton's whole promise is "it boots green". This is the gate that keeps it true.
 on:
   push:
     branches: [main]
@@ -41,7 +41,7 @@ jobs:
           restore-keys: composer-${{ matrix.php }}-
 
       # `install`, not `update`: this is exactly what `composer create-project`
-      # resolves for someone planting the seed, so it is what must be green.
+      # resolves for someone installing the skeleton, so it is what must be green.
       - name: Install dependencies
         run: composer install --no-interaction --no-progress --prefer-dist
 

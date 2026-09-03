@@ -16,12 +16,14 @@ doctrine:
         mappings:
             # THE STOCK BLOCK, AND IT IS RIGHT. doctrine-bundle's Flex recipe
             # writes this assuming the symfony/skeleton's `App\` root, and the
-            # seed's root IS `App\` (composer.json autoload.psr-4) — the seed is
+            # skeleton's root IS `App\` (composer.json autoload.psr-4) — the
+            # skeleton is
             # a stock Symfony application, and `Uhifadhi\` is reserved for the
             # platform's own packages (`Uhifadhi\Seam\`, and its siblings).
             #
-            # It reads as boilerplate and is kept in the seed on purpose: the
-            # seed is copied once and never updated, so a line here is one every
+            # It reads as boilerplate and is kept in the skeleton on purpose:
+            # the skeleton is copied once and never updated, so a line here is
+            # one every
             # future installation is stuck with, and this one has to be present
             # and correct before the area entity the seam asks for can map at
             # all. See config/packages/seam.yaml for that step.

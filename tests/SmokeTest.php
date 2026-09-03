@@ -17,7 +17,7 @@ use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 use Symfony\Component\HttpFoundation\Response;
 
 /**
- * The whole of the seed's test suite: a freshly planted installation boots and
+ * The whole of the skeleton's test suite: a fresh installation boots and
  * answers. Everything beyond this arrives as a module bundle and is tested there.
  */
 final class SmokeTest extends WebTestCase
@@ -31,20 +31,21 @@ final class SmokeTest extends WebTestCase
     }
 
     /**
-     * `/` ANSWERS 200 WITH THE WELCOME PAGE, and that is the seed's contract
-     * now. It used to be an honest 404 — the seed ships no controllers, so in
+     * `/` ANSWERS 200 WITH THE WELCOME PAGE, and that is the skeleton's
+     * contract now. It used to be an honest 404 — the skeleton ships no
+     * controllers, so in
      * debug Symfony rendered its own welcome-404, which was the first thing
      * anybody saw after `composer create-project`: a correct installation
      * looking like a broken one.
      *
      * The fix is one route and no PHP. `config/routes/shell.yaml` points `/` at
      * the shell's `welcome.html.twig` through Symfony's own TemplateController,
-     * so the seed still ships no controller class and the shell still ships no
+     * so the skeleton still ships no controller class and the shell ships no
      * route.
      *
      * The body is asserted here, unlike before, because it is no longer a
      * framework internal: it is a page this platform ships and this route names.
-     * As strings rather than through a crawler — the seed carries no
+     * As strings rather than through a crawler — the skeleton carries no
      * css-selector and does not need one to know it served the right page.
      */
     public function testTheHomepageAnswersWithTheWelcomePage(): void
