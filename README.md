@@ -57,7 +57,11 @@ php -S localhost:8000 -t public
 It serves on the first request: a branded, themed, navigable shell with an empty
 sidebar, from the shell (`uhifadhi/shell-module`). There is no user, no security
 bundle and no module yet, and none of that is a placeholder — it is what an
-installation with nothing in it honestly looks like. Your first page extends one
+installation with nothing in it honestly looks like. `/` is open here in the
+plainest sense: there is no firewall in this project to close it. Installing
+identity (`uhifadhi/team-module`) is what changes that — its documented
+`security.yaml` is default-closed, and from then on a visitor who is not signed
+in is sent to `/login` from `/` and from everywhere else. Your first page extends one
 of the shell's three frames and fills one block:
 
 ```twig
