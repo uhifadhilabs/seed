@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4eeefc0618ab53c598ac4398f3aef541",
+    "content-hash": "028fe9cdffea3141cfe0a8cf7831006d",
     "packages": [
         {
             "name": "composer/semver",
@@ -5029,16 +5029,16 @@
         },
         {
             "name": "uhifadhi/seam-module",
-            "version": "v0.1.1",
+            "version": "v0.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/uhifadhilabs/seam-module.git",
-                "reference": "883d86e9e69738fdfcb4574b72fc67d5b2cd5b50"
+                "reference": "a514eab47bce97360d3015f3be9f17f0537611e1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/uhifadhilabs/seam-module/zipball/883d86e9e69738fdfcb4574b72fc67d5b2cd5b50",
-                "reference": "883d86e9e69738fdfcb4574b72fc67d5b2cd5b50",
+                "url": "https://api.github.com/repos/uhifadhilabs/seam-module/zipball/a514eab47bce97360d3015f3be9f17f0537611e1",
+                "reference": "a514eab47bce97360d3015f3be9f17f0537611e1",
                 "shasum": ""
             },
             "require": {
@@ -5052,7 +5052,7 @@
                 "symfony/framework-bundle": "^7.3 || ^8.0",
                 "symfony/http-kernel": "^7.3 || ^8.0",
                 "symfony/uid": "^7.3 || ^8.0",
-                "uhifadhi/module-contracts": "^0.1 || ^0.2"
+                "uhifadhi/module-contracts": "^0.1 || ^0.2 || ^0.3"
             },
             "require-dev": {
                 "friendsofphp/php-cs-fixer": "^3.95",
@@ -5093,9 +5093,9 @@
             ],
             "support": {
                 "issues": "https://github.com/uhifadhilabs/seam-module/issues",
-                "source": "https://github.com/uhifadhilabs/seam-module/tree/v0.1.1"
+                "source": "https://github.com/uhifadhilabs/seam-module/tree/v0.1.2"
             },
-            "time": "2026-09-03T17:32:43+00:00"
+            "time": "2026-09-03T20:51:58+00:00"
         },
         {
             "name": "uhifadhi/shell-module",
