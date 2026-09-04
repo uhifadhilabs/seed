@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "028fe9cdffea3141cfe0a8cf7831006d",
+    "content-hash": "ceeecb80f26a0e9ea7babea6d8595630",
     "packages": [
         {
             "name": "composer/semver",
@@ -5099,16 +5099,16 @@
         },
         {
             "name": "uhifadhi/shell-module",
-            "version": "v0.5.0",
+            "version": "v0.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/uhifadhilabs/shell-module.git",
-                "reference": "1f8b84831e9d0064ec4d9bd75884809cd709129b"
+                "reference": "d24ccbc82cb82256f9720db3561d2888691ca579"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/uhifadhilabs/shell-module/zipball/1f8b84831e9d0064ec4d9bd75884809cd709129b",
-                "reference": "1f8b84831e9d0064ec4d9bd75884809cd709129b",
+                "url": "https://api.github.com/repos/uhifadhilabs/shell-module/zipball/d24ccbc82cb82256f9720db3561d2888691ca579",
+                "reference": "d24ccbc82cb82256f9720db3561d2888691ca579",
                 "shasum": ""
             },
             "require": {
@@ -5137,7 +5137,7 @@
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "0.4-dev"
+                    "dev-main": "0.6-dev"
                 }
             },
             "autoload": {
@@ -5170,9 +5170,9 @@
             ],
             "support": {
                 "issues": "https://github.com/uhifadhilabs/shell-module/issues",
-                "source": "https://github.com/uhifadhilabs/shell-module/tree/v0.5.0"
+                "source": "https://github.com/uhifadhilabs/shell-module/tree/v0.6.0"
             },
-            "time": "2026-09-03T12:06:17+00:00"
+            "time": "2026-09-04T17:57:58+00:00"
         }
     ],
     "packages-dev": [
