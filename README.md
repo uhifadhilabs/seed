@@ -83,10 +83,9 @@ the per-area install record. Point `DATABASE_URL` at a database in
 DATABASE_URL="postgresql://app:app@127.0.0.1:5432/my_installation?serverVersion=17&charset=utf8"
 ```
 
-Then **write your area entity before you touch the schema.** The seam maps its
-per-area row to an interface and you resolve it to your own class; that is not
-an optional extra, because the association is `NOT NULL` and until it resolves
-there is no schema to create at all:
+Then **give it an area.** The seam maps its per-area row to an interface, and
+until that interface resolves to a class there is no schema to create at all —
+the association is `NOT NULL`, so every metadata walk stops:
 
 ```console
 $ bin/console doctrine:migrations:diff
@@ -94,46 +93,32 @@ In MappingException.php line 72:
   Class 'Uhifadhi\Seam\Entity\AreaInterface' does not exist
 ```
 
-So, once — the whole of it:
+**Whoever knows the answer states the resolution**, and for an area that is
+`uhifadhi/area-module`:
 
-```php
-// src/Entity/AreaOfInterest.php
-declare(strict_types=1);
-
-namespace App\Entity;
-
-use Doctrine\ORM\Mapping as ORM;
-use Uhifadhi\Seam\Entity\AreaInterface;
-
-#[ORM\Entity]
-class AreaOfInterest implements AreaInterface
-{
-    #[ORM\Id] #[ORM\GeneratedValue] #[ORM\Column]
-    private ?int $id = null;
-
-    public function getId(): ?int
-    {
-        return $this->id;
-    }
-}
+```bash
+composer require uhifadhi/area-module
 ```
 
-and uncomment the block `config/packages/seam.yaml` ends with, naming it:
+It brings a real area — a name, a gazetted MultiPolygon boundary, a public uuid —
+maps its own entity and prepends the resolution, the same way
+`uhifadhi/team-module` answers the user contract. **You write no `doctrine.yaml`
+line.** With both answer-modules installed, this project reaches
+`doctrine:migrations:diff` with zero doctrine edits.
 
-```yaml
-# config/packages/seam.yaml
-doctrine:
-    orm:
-        resolve_target_entities:
-            Uhifadhi\Seam\Entity\AreaInterface: App\Entity\AreaOfInterest
+The area's boundary is a PostGIS column, so the database needs the extension
+once:
+
+```sql
+CREATE EXTENSION IF NOT EXISTS postgis;
 ```
 
-`App\Entity` is this project's root — the skeleton is a stock Symfony application,
-and `Uhifadhi\` belongs to the platform's own packages (`Uhifadhi\Seam\` on the
-left-hand side above is the bundle's, not yours). So the mapping prefix the
-stock doctrine-bundle recipe writes into `config/packages/doctrine.yaml` already
-covers the entity, and the comment there says why the skeleton keeps the block
-rather than leaving it to the recipe.
+This used to be a hand-step: write your own `App\Entity\AreaOfInterest`, then
+uncomment a block in `config/packages/seam.yaml`. It is gone, and the block with
+it. **You write a `resolve_target_entities` line only to disagree** — an
+installation whose areas are its own entity names that class in
+`config/packages/doctrine.yaml` and wins, because prepended configuration loses
+to the application's.
 
 Then:
 

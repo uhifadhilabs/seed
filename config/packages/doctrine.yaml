@@ -23,10 +23,12 @@ doctrine:
             #
             # It reads as boilerplate and is kept in the skeleton on purpose:
             # the skeleton is copied once and never updated, so a line here is
-            # one every
-            # future installation is stuck with, and this one has to be present
-            # and correct before the area entity the seam asks for can map at
-            # all. See config/packages/seam.yaml for that step.
+            # one every future installation is stuck with, and this one has to
+            # be present and correct before any entity of YOURS can map at all.
+            #
+            # It is not what maps an area. uhifadhi/area-module maps its own
+            # entity directory and prepends the seam's resolution, so nothing
+            # about the area depends on this block — see the README.
             App:
                 type: attribute
                 is_bundle: false
