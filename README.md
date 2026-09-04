@@ -134,9 +134,9 @@ replacing: a route named `welcome`.
 - [The architecture](docs/architecture.md) — one skeleton and a set of modules,
   what is in this repository, and what is deliberately not (including why
   Doctrine is here at all).
-- [Maintaining the skeleton](docs/maintaining-the-skeleton.md) — `symfony.lock`
-  as the recipe ledger, and the re-sync rule for the two recipes the skeleton
-  ships with.
+- [Maintaining the skeleton](docs/maintaining-the-skeleton.md) — the version
+  rhythm (a ring's minor is the skeleton's minor), `symfony.lock` as the recipe
+  ledger, and the re-sync rule for the two recipes the skeleton ships with.
 
 ## Licence
 
