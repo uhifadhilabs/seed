@@ -191,7 +191,7 @@
             "repo": "github.com/uhifadhilabs/recipes",
             "branch": "main",
             "version": "0.1",
-            "ref": "a42076c062d167cbb3e4e2f6d7c67d2f0744b835"
+            "ref": "087830f88ed788e60eb989b8e575b1c4ba819126"
         },
         "files": [
             "config/packages/seam.yaml"
