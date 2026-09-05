@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "04b9a1b52417935a0a701e8b95d84a82",
+    "content-hash": "1db434c072fb22861c92c1d494648f15",
     "packages": [
         {
             "name": "composer/semver",
@@ -4973,16 +4973,16 @@
         },
         {
             "name": "uhifadhi/module-contracts",
-            "version": "v0.3.0",
+            "version": "v0.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/uhifadhilabs/module-contracts.git",
-                "reference": "79faeb05ddf33d143d4487ae04563fdfb59525f1"
+                "reference": "75631c12d8a03111a6bddd0499a5a0f9ade3cd54"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/uhifadhilabs/module-contracts/zipball/79faeb05ddf33d143d4487ae04563fdfb59525f1",
-                "reference": "79faeb05ddf33d143d4487ae04563fdfb59525f1",
+                "url": "https://api.github.com/repos/uhifadhilabs/module-contracts/zipball/75631c12d8a03111a6bddd0499a5a0f9ade3cd54",
+                "reference": "75631c12d8a03111a6bddd0499a5a0f9ade3cd54",
                 "shasum": ""
             },
             "require": {
@@ -5023,22 +5023,22 @@
             ],
             "support": {
                 "issues": "https://github.com/uhifadhilabs/module-contracts/issues",
-                "source": "https://github.com/uhifadhilabs/module-contracts/tree/v0.3.0"
+                "source": "https://github.com/uhifadhilabs/module-contracts/tree/v0.3.1"
             },
-            "time": "2026-09-03T20:47:55+00:00"
+            "time": "2026-09-04T11:17:14+00:00"
         },
         {
             "name": "uhifadhi/seam-module",
-            "version": "v0.1.2",
+            "version": "v0.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/uhifadhilabs/seam-module.git",
-                "reference": "a514eab47bce97360d3015f3be9f17f0537611e1"
+                "reference": "55514c4456f694baf2c4a4398861dc0f2575d8a0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/uhifadhilabs/seam-module/zipball/a514eab47bce97360d3015f3be9f17f0537611e1",
-                "reference": "a514eab47bce97360d3015f3be9f17f0537611e1",
+                "url": "https://api.github.com/repos/uhifadhilabs/seam-module/zipball/55514c4456f694baf2c4a4398861dc0f2575d8a0",
+                "reference": "55514c4456f694baf2c4a4398861dc0f2575d8a0",
                 "shasum": ""
             },
             "require": {
@@ -5062,7 +5062,7 @@
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "0.1-dev"
+                    "dev-main": "0.2-dev"
                 }
             },
             "autoload": {
@@ -5093,9 +5093,9 @@
             ],
             "support": {
                 "issues": "https://github.com/uhifadhilabs/seam-module/issues",
-                "source": "https://github.com/uhifadhilabs/seam-module/tree/v0.1.2"
+                "source": "https://github.com/uhifadhilabs/seam-module/tree/v0.2.0"
             },
-            "time": "2026-09-03T20:51:58+00:00"
+            "time": "2026-09-05T09:18:17+00:00"
         },
         {
             "name": "uhifadhi/shell-module",
